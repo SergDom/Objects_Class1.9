@@ -7,10 +7,10 @@ public class Author {
         this.authorLastName = authorLastName;
     }
     public String getAuthorName(){
-        return authorName;
+        return this.authorName;
     }
 
     public String getAuthorLastName() {
-        return authorLastName;
+        return this.authorLastName;
     }
 }

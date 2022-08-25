@@ -11,12 +11,16 @@ public class Book {
     }
 
     public String getBookName(){
-        return bookName;
+        return this.bookName;
     }
     public String getAuthor(){
-        return author;
+        return this.author;
     }
+    public int getPublication(){
+        return this.publication;
+   }
     public void setPublication (int publication){
         this.publication = publication;
     }
+
 }
