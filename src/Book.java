@@ -18,6 +18,7 @@ public class Book {
     public int getPublication(){
         return this.publication;
    }
+
     public void setPublication (int publication){
         this.publication = publication;
     }
