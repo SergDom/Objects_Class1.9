@@ -9,8 +9,11 @@ public class Main {
 
         Book book2 = new Book("Унесённые ветром", author2, 1936);
         System.out.println(book1);
+        System.out.println(book1.hashCode());
         book1.setPublication(2022);
         System.out.println(book1);
+        System.out.println(book1.hashCode());
+        System.out.println();
         System.out.println(book1.equals(bookCompare));
 
 //        System.out.println();
