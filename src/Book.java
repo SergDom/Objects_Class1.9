@@ -26,12 +26,11 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object otherName) {
-        if (this.getClass() != otherName.getClass()) {
-            return false;
-        }
-        Book bookCompare = (Book) otherName;
-        return bookName.equals(bookCompare.bookName);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return publication == book.publication && Objects.equals(bookName, book.bookName) && Objects.equals(author, book.author);
     }
 
     @Override
