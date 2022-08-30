@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
     private String bookName;
     private Author author;
@@ -21,6 +23,25 @@ public class Book {
 
     public void setPublication (int publication){
         this.publication = publication;
+    }
+
+    @Override
+    public boolean equals(Object otherName) {
+        if (this.getClass() != otherName.getClass()) {
+            return false;
+        }
+        Book bookCompare = (Book) otherName;
+        return bookName.equals(bookCompare.bookName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(publication);
+    }
+
+    @Override
+    public String toString() {
+        return "Название: " + bookName + ',' + " Автор: " + getAuthor().getAuthorName() + " " + getAuthor().getAuthorLastName() + ',' + " Год публикации: " + publication;
     }
 
 }
