@@ -23,7 +23,7 @@ public class Main {
         book2.setPublication(2000);
         System.out.println(book2);
         System.out.println(book2.hashCode());
-        System.out.println(book1.equals(bookCompare2));
+        System.out.println(book2.equals(bookCompare2));
 
     }
 }

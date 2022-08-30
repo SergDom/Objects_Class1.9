@@ -27,8 +27,9 @@ public class Book {
 
     @Override
     public boolean equals(Object otherName) {
-        if (this.bookName != bookName) {
-            return false;}
+        if (this.getClass() != otherName.getClass()) {
+            return false;
+        }
         Book bookCompare = (Book) otherName;
         return bookName.equals(bookCompare.bookName);
     }
@@ -42,4 +43,5 @@ public class Book {
     public String toString() {
         return "Название: " + bookName + ',' + " Автор: " + getAuthor().getAuthorName() + " " + getAuthor().getAuthorLastName() + ',' + " Год публикации: " + publication;
     }
+
 }
